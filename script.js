@@ -74,6 +74,34 @@ function placeOrder() {
         ". Your total is $" +
         total
     );
+    let orderList =
+    document.getElementById("admin-orders");
+
+let foodNames = "";
+
+for (let i = 0; i < cartItems.length; i++) {
+
+    foodNames +=
+        cartItems[i].name + " ";
+
+}
+
+orderList.innerHTML +=
+`
+<div class="admin-order">
+
+    <h3>${customerName}</h3>
+
+    <p>${foodNames}</p>
+
+    <p>Total: $${total}</p>
+
+    <button onclick="completeOrder(this)">
+        Complete
+    </button>
+
+</div>
+`;
 
     total = 0;
 
@@ -84,5 +112,10 @@ function placeOrder() {
     document.getElementById("total").innerText = total;
 
     document.getElementById("customerName").value = "";
+
+}
+function completeOrder(button) {
+
+    button.parentElement.remove();
 
 }
