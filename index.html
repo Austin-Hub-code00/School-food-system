@@ -6,28 +6,354 @@
 </head>
 <body>
 
-    <h1>School Food Ordering System</h1>
-    <h2>Cart Total: $<span id="total">0</span></h2>
+   <h1>School 早餐部 Online Ordering</h1>
+
+<h2>Cart Total: $<span id="total">0</span></h2>
+<h2>Your Cart</h2>
+
+<div id="cart-items"></div>
+
+<!-- 蔥抓餅 -->
+
+<h2>蔥抓餅</h2>
 
 <div class="menu">
 
     <div class="food-card">
-        <h2>Fried Rice</h2>
-        <p>$80</p>
-        <button onclick="addToCart(80)">Add to Cart</button>
+        <h3>原味蔥抓餅</h3>
+        <p>$40</p>
+        <button onclick="addToCart('原味蔥抓餅',40)">
+    Add to Cart
+</button>
     </div>
 
     <div class="food-card">
-        <h2>Bubble Tea</h2>
+        <h3>肉鬆蔥抓餅</h3>
+        <p>$45</p>
+        <button onclick="addToCart('肉鬆蔥抓餅',45)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>培根蔥抓餅</h3>
+        <p>$45</p>
+        <button onclick="addToCart('培根蔥抓餅',45)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>起司蔥抓餅</h3>
+        <p>$45</p>
+        <button onclick="addToCart('起司蔥抓餅',45)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>鮪魚蔥抓餅</h3>
+        <p>$45</p>
+         <button onclick="addToCart('鮪魚蔥抓餅',45)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>肉排蔥抓餅</h3>
+        <p>$65</p>
+         <button onclick="addToCart('肉排蔥抓餅',65)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>薯餅蔥抓餅</h3>
+        <p>$60</p>
+        <button onclick="addToCart('薯餅蔥抓餅',60)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>卡拉雞蔥抓餅</h3>
+        <p>$70</p>
+        <button onclick="addToCart('卡拉雞蔥抓餅',70)">
+    Add to Cart
+</button>
+    </div>
+
+</div>
+
+<!-- 蛋餅 -->
+
+<h2>蛋餅</h2>
+
+<div class="menu">
+
+    <div class="food-card">
+        <h3>原味蛋餅</h3>
+        <p>$35</p>
+        <button onclick="addToCart('原味蛋餅',35)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>肉鬆蛋餅</h3>
+        <p>$40</p>
+        <button onclick="addToCart('肉鬆蛋餅',40)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>培根蛋餅</h3>
+        <p>$40</p>
+        <button onclick="addToCart('培根蛋餅',40)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>起司蛋餅</h3>
+        <p>$40</p>
+         <button onclick="addToCart('起司蛋餅',40)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>鮪魚蛋餅</h3>
+        <p>$40</p>
+        <button onclick="addToCart('鮪魚蛋餅',40)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>肉排蛋餅</h3>
+        <p>$60</p>
+        <button onclick="addToCart('肉排蛋餅',60)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>薯餅蛋餅</h3>
+        <p>$55</p>
+        <button onclick="addToCart('薯餅蛋餅',55)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>卡拉雞蛋餅</h3>
+        <p>$65</p>
+        <button onclick="addToCart('卡拉雞蛋餅',65)">
+    Add to Cart
+</button>
+    </div>
+
+</div>
+
+<!-- 吐司 漢堡 -->
+
+<h2>吐司 / 漢堡</h2>
+
+<div class="menu">
+
+    <div class="food-card">
+        <h3>肉鬆蛋吐司</h3>
+        <p>$30</p>
+         <button onclick="addToCart('肉鬆蛋吐司',30)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>起司蛋吐司</h3>
+        <p>$30</p>
+         <button onclick="addToCart('起司蛋吐司',30)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>培根蛋吐司</h3>
+        <p>$35</p>
+        <button onclick="addToCart('培根蛋吐司',35)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>鮪魚蛋吐司</h3>
+        <p>$35</p>
+        <button onclick="addToCart('鮪魚蛋吐司',35)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>肉排蛋吐司</h3>
         <p>$50</p>
-        <button onclick="addToCart(50)">Add to Cart</button>
+        <button onclick="addToCart('肉排蛋吐司',50)">
+    Add to Cart
+</button>
     </div>
 
     <div class="food-card">
-        <h2>Chicken Burger</h2>
-        <p>$90</p>
-        <button onclick="addToCart(90)">Add to Cart</button>
+        <h3>薯餅蛋漢堡</h3>
+        <p>$45</p>
+        <button onclick="addToCart('薯餅蛋漢堡',45)">
+    Add to Cart
+</button>
     </div>
+
+    <div class="food-card">
+        <h3>牛肉起司堡</h3>
+        <p>$55</p>
+        <button onclick="addToCart('牛肉起司堡',55)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>卡拉雞漢堡</h3>
+        <p>$55</p>
+        <button onclick="addToCart('卡拉雞漢堡',55)">
+    Add to Cart
+</button>
+    </div>
+
+</div>
+
+<!-- 厚片吐司 -->
+
+<h2>厚片吐司</h2>
+
+<div class="menu">
+
+    <div class="food-card">
+        <h3>花生厚片</h3>
+        <p>$30</p>
+        <button onclick="addToCart('花生厚片',30)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>巧克力厚片</h3>
+        <p>$30</p>
+        <button onclick="addToCart('巧克力厚片',30)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>椰香奶酥厚片</h3>
+        <p>$30</p>
+         <button onclick="addToCart('椰香奶酥厚片',30)">
+    Add to Cart
+</button>
+    </div>
+
+</div>
+
+<!-- 其他餐點 -->
+
+<h2>其他餐點</h2>
+
+<div class="menu">
+
+    <div class="food-card">
+        <h3>蘿蔔糕</h3>
+        <p>$40</p>
+        <button onclick="addToCart('蘿蔔糕',40)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>薯餅包蛋</h3>
+        <p>$50</p>
+        <button onclick="addToCart('薯餅包蛋',50)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>紐奧良起司</h3>
+        <p>$55</p>
+       <button onclick="addToCart('紐奧良起司',55)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>鮮肉包</h3>
+        <p>$30</p>
+        <button onclick="addToCart('鮮肉包',30)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>湯包（6顆）</h3>
+        <p>$50</p>
+        <button onclick="addToCart('湯包（6顆）',50)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>黑胡椒麵含荷包蛋</h3>
+        <p>$50</p>
+        <button onclick="addToCart('黑胡椒麵含荷包蛋',50)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>蘑菇麵含荷包蛋</h3>
+        <p>$50</p>
+        <button onclick="addToCart('蘑菇麵含荷包蛋',50)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>黃金脆薯</h3>
+        <p>$35</p>
+        <button onclick="addToCart('黃金脆薯',35)">
+    Add to Cart
+</button>
+    </div>
+
+    <div class="food-card">
+        <h3>甜不辣</h3>
+        <p>$35</p>
+        <button onclick="addToCart('甜不辣',35)">
+    Add to Cart
+</button>
+    </div>
+
+</div>
+
+<h2 style="margin-top:50px;">供應時間提醒</h2>
+
+<p>麵食類 11 點供應</p>
+<p>薯條與甜不辣 11 點供應</p>
+<div class="order-section">
+
+    <h2>Customer Information</h2>
+
+    <input type="text" id="customerName" placeholder="Enter Your Name">
+
+    <br><br>
+
+    <button onclick="placeOrder()">Place Order</button>
 
 </div>
 
