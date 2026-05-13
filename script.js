@@ -1,5 +1,5 @@
 let total = 0;
-let orderNumber = 1;
+
 
 let cartItems = [];
 
@@ -84,7 +84,21 @@ async function placeOrder() {
 
     total
 );
-    let foodNames = "";
+let counterRef =
+window.doc(window.db, "system", "counter");
+
+let counterSnap =
+await window.getDoc(counterRef);
+
+let currentNumber = 1;
+
+if (counterSnap.exists()) {
+
+    currentNumber =
+    counterSnap.data().current;
+
+}    
+let foodNames = "";
 
 for (let i = 0; i < cartItems.length; i++) {
 
@@ -93,11 +107,18 @@ for (let i = 0; i < cartItems.length; i++) {
 
 }
 
-await addDoc(collection(db, "orders"), {
-number: orderNumber,
+await window.addDoc(
+window.collection(window.db, "orders"),
+{
+number: currentNumber,
 customer: customerName,
 foods: foodNames,
 total: total
+});
+await window.setDoc(counterRef, {
+
+    current: currentNumber + 1
+
 });
 
     total = 0;
