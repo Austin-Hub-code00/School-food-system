@@ -93,27 +93,12 @@ for (let i = 0; i < cartItems.length; i++) {
 
 }
 
-let orders =
-JSON.parse(localStorage.getItem("orders")) || [];
-
-orders.push({
-
-    number: orderNumber,
-
-    customer: customerName,
-
-    foods: foodNames,
-
-    total: total
-
+addDoc(collection(db, "orders"), {
+number: orderNumber,
+customer: customerName,
+foods: foodNames,
+total: total
 });
-
-orderNumber++;
-
-localStorage.setItem(
-    "orders",
-    JSON.stringify(orders)
-);
 
     total = 0;
 

@@ -1,58 +1,24 @@
-let orders =
-JSON.parse(localStorage.getItem("orders")) || [];
-
 let adminDiv =
 document.getElementById("admin-orders");
-
-displayOrders();
-setInterval(refreshOrders, 1000);
-
-function displayOrders() {
-
-    adminDiv.innerHTML = "";
-
-    for (let i = 0; i < orders.length; i++) {
-
-        adminDiv.innerHTML +=
-        `
-        <div class="admin-order">
-
-            <h3>
-Order #${orders[i].number}
-</h3>
-
-<h3>${orders[i].customer}</h3>
-
-            <p>${orders[i].foods}</p>
-
-            <p>Total: $${orders[i].total}</p>
-
-            <button onclick="completeOrder(${i})">
-                Complete
-            </button>
-
-        </div>
-        `;
-    }
-}
-
-function completeOrder(index) {
-
-    orders.splice(index, 1);
-
-    localStorage.setItem(
-        "orders",
-        JSON.stringify(orders)
-    );
-
-    displayOrders();
-
-}
-function refreshOrders() {
-
-    orders =
-    JSON.parse(localStorage.getItem("orders")) || [];
-
-    displayOrders();
-
+onSnapshot(collection(db, "orders"), (snapshot) => {
+adminDiv.innerHTML = "";
+snapshot.forEach((docItem) => {
+let order = docItem.data();
+adminDiv.innerHTML +=
+`
+11
+ <div class="admin-order">
+ <h3>Order #${order.number}</h3>
+ <h3>${order.customer}</h3>
+ <p>${order.foods}</p>
+ <p>Total: $${order.total}</p>
+ <button onclick="completeOrder('${docItem.id}')">
+ Complete
+ </button>
+ </div>
+ `;
+});
+});
+window.completeOrder = async function(id) {
+await deleteDoc(doc(db, "orders", id));
 }

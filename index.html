@@ -364,6 +364,29 @@
 
 </div>
 
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/
+firebase-app.js";
+import {
+getFirestore,
+collection,
+addDoc
+}
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+const firebaseConfig = {
+  apiKey: "AIzaSyAmVPTRxYG2cbh5wl6JP5OZflQO1Fjtz6Q",
+  authDomain: "school-breakfast-system.firebaseapp.com",
+  projectId: "school-breakfast-system",
+  storageBucket: "school-breakfast-system.firebasestorage.app",
+  messagingSenderId: "756647607617",
+  appId: "1:756647607617:web:dfca77a137515ff3ad35c0"
+};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+window.db = db;
+window.collection = collection;
+window.addDoc = addDoc;
+</script>
 
 <script src="script.js"></script>
 </body>
