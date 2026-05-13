@@ -69,21 +69,7 @@ async function placeOrder() {
         return;
     }
 
-    alert(
-    "Order Successful!\n\n" +
-
-    "Order Number: #" +
-
-    orderNumber +
-
-    "\n\nThank you, " +
-
-    customerName +
-
-    "\nYour total is $" +
-
-    total
-);
+   
 let counterRef =
 window.doc(window.db, "system", "counter");
 
@@ -120,7 +106,21 @@ await window.setDoc(counterRef, {
     current: currentNumber + 1
 
 });
+ alert(
+    "Order Successful!\n\n" +
 
+    "Order Number: #" +
+
+    currentNumber +
+
+    "\n\nThank you, " +
+
+    customerName +
+
+    "\nYour total is $" +
+
+    total
+);
     total = 0;
 
     cartItems = [];
