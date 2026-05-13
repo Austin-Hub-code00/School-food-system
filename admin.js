@@ -41,3 +41,13 @@ window.doc(window.db, "orders", id)
 );
 
 }
+window.resetCounter = async function() {
+    await window.setDoc(
+        window.doc(window.db, "system", "counter"),
+        {
+            current: 1
+        }
+    );
+
+    alert("Order numbers reset to #1");
+};

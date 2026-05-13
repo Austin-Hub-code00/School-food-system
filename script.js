@@ -54,6 +54,9 @@ async function placeOrder() {
 
     let customerName =
         document.getElementById("customerName").value;
+        let subtotal = total;
+        let serviceFee = subtotal * 0.005;
+        let finalTotal = subtotal + serviceFee;
 
     if (customerName === "") {
 
@@ -99,7 +102,9 @@ window.collection(window.db, "orders"),
 number: currentNumber,
 customer: customerName,
 foods: foodNames,
-total: total
+total: finalTotal,
+subtotal: subtotal,
+serviceFee: serviceFee
 });
 await window.setDoc(counterRef, {
 
@@ -107,19 +112,19 @@ await window.setDoc(counterRef, {
 
 });
  alert(
-    "Order Successful!\n\n" +
+"Order Successful!\n\n" +
 
-    "Order Number: #" +
+"Order Number: #" + currentNumber +
 
-    currentNumber +
+"\n\nCustomer: " + customerName +
 
-    "\n\nThank you, " +
+"\n\nSubtotal: $" + subtotal.toFixed(2) +
 
-    customerName +
+"\nService Fee (1%): $" + serviceFee.toFixed(2) +
 
-    "\nYour total is $" +
+"\nTOTAL: $" + finalTotal.toFixed(2) +
 
-    total
+"\n\nThank you for your order!"
 );
     total = 0;
 
