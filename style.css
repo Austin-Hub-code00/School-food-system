@@ -95,3 +95,27 @@ input {
     }
 
 }
+.warning-box {
+
+    background-color: #fff3cd;
+
+    border: 2px solid orange;
+
+    width: 80%;
+
+    margin: 50px auto;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+}
+.school-logo {
+
+    width: 500px;
+
+    margin-top: 20px;
+
+    border-radius: 400px;
+
+}

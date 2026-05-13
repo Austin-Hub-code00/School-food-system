@@ -1,4 +1,5 @@
 let total = 0;
+let orderNumber = 100;
 
 let cartItems = [];
 
@@ -74,34 +75,36 @@ function placeOrder() {
         ". Your total is $" +
         total
     );
-    let orderList =
-    document.getElementById("admin-orders");
-
-let foodNames = "";
+    let foodNames = "";
 
 for (let i = 0; i < cartItems.length; i++) {
 
     foodNames +=
-        cartItems[i].name + " ";
+    cartItems[i].name + "<br>";
 
 }
 
-orderList.innerHTML +=
-`
-<div class="admin-order">
+let orders =
+JSON.parse(localStorage.getItem("orders")) || [];
 
-    <h3>${customerName}</h3>
+orders.push({
 
-    <p>${foodNames}</p>
+    number: orderNumber,
 
-    <p>Total: $${total}</p>
+    customer: customerName,
 
-    <button onclick="completeOrder(this)">
-        Complete
-    </button>
+    foods: foodNames,
 
-</div>
-`;
+    total: total
+
+});
+
+orderNumber++;
+
+localStorage.setItem(
+    "orders",
+    JSON.stringify(orders)
+);
 
     total = 0;
 

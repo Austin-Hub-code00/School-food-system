@@ -7,7 +7,8 @@
 </head>
 <body>
 
-   <h1>School 早餐部 Online Ordering</h1>
+   <img src="logo.jpg" class="school-logo">
+    <h1>台師大(林口)早餐部點餐系統</h1>
 
 <h2>Cart Total: $<span id="total">0</span></h2>
 <h2>Your Cart</h2>
@@ -342,10 +343,15 @@
 
 </div>
 
-<h2 style="margin-top:50px;">供應時間提醒</h2>
+<div class="warning-box">
 
-<p>麵食類 11 點供應</p>
-<p>薯條與甜不辣 11 點供應</p>
+    <h2>供應時間提醒</h2>
+
+    <p>⚠ 麵食類 11 點供應</p>
+
+    <p>⚠ 黃金脆薯與甜不辣 11 點供應</p>
+
+</div>
 <div class="order-section">
 
     <h2>Customer Information</h2>
@@ -357,9 +363,7 @@
     <button onclick="placeOrder()">Place Order</button>
 
 </div>
-<h2>Admin Order List</h2>
 
-<div id="admin-orders"></div>
 
 <script src="script.js"></script>
 </body>
