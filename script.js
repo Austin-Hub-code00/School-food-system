@@ -1,5 +1,5 @@
 let total = 0;
-let orderNumber = 100;
+let orderNumber = 1;
 
 let cartItems = [];
 
@@ -70,11 +70,20 @@ function placeOrder() {
     }
 
     alert(
-        "Order Successful! Thank you, " +
-        customerName +
-        ". Your total is $" +
-        total
-    );
+    "Order Successful!\n\n" +
+
+    "Order Number: #" +
+
+    orderNumber +
+
+    "\n\nThank you, " +
+
+    customerName +
+
+    "\nYour total is $" +
+
+    total
+);
     let foodNames = "";
 
 for (let i = 0; i < cartItems.length; i++) {

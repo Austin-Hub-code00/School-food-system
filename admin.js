@@ -5,6 +5,7 @@ let adminDiv =
 document.getElementById("admin-orders");
 
 displayOrders();
+setInterval(refreshOrders, 1000);
 
 function displayOrders() {
 
@@ -43,6 +44,14 @@ function completeOrder(index) {
         "orders",
         JSON.stringify(orders)
     );
+
+    displayOrders();
+
+}
+function refreshOrders() {
+
+    orders =
+    JSON.parse(localStorage.getItem("orders")) || [];
 
     displayOrders();
 
