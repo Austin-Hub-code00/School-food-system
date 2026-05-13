@@ -21,7 +21,11 @@ adminDiv.innerHTML +=
 
 <p>${order.foods}</p>
 
-<p>Total: $${order.total}</p>
+<p>Subtotal: NT$${order.subtotal}</p>
+
+<p>Service Fee: NT$${order.serviceFee}</p>
+
+<p><b>Total: NT$${order.total}</b></p>
 
 <button onclick="completeOrder('${docItem.id}')">
 Complete

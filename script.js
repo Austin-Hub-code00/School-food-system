@@ -55,7 +55,7 @@ async function placeOrder() {
     let customerName =
         document.getElementById("customerName").value;
         let subtotal = total;
-        let serviceFee = subtotal * 0.005;
+        let serviceFee = 1;
         let finalTotal = subtotal + serviceFee;
 
     if (customerName === "") {
@@ -118,11 +118,11 @@ await window.setDoc(counterRef, {
 
 "\n\nCustomer: " + customerName +
 
-"\n\nSubtotal: $" + subtotal.toFixed(2) +
+"\n\nSubtotal: NT$" + subtotal +
 
-"\nService Fee (1%): $" + serviceFee.toFixed(2) +
+"\nService Fee: NT$" + serviceFee +
 
-"\nTOTAL: $" + finalTotal.toFixed(2) +
+"\nTOTAL: NT$" + finalTotal +
 
 "\n\nThank you for your order!"
 );
