@@ -50,7 +50,7 @@ function removeItem(index) {
     displayCart();
 }
 
-function placeOrder() {
+async function placeOrder() {
 
     let customerName =
         document.getElementById("customerName").value;
@@ -93,7 +93,7 @@ for (let i = 0; i < cartItems.length; i++) {
 
 }
 
-addDoc(collection(db, "orders"), {
+await addDoc(collection(db, "orders"), {
 number: orderNumber,
 customer: customerName,
 foods: foodNames,
