@@ -19,6 +19,8 @@ adminDiv.innerHTML +=
 
 <h3>${order.customer}</h3>
 
+<p>Pick Up Time: ${order.pickupTime}</p>
+
 <p>${order.foods}</p>
 
 <p>Subtotal: NT$${order.subtotal}</p>
