@@ -295,6 +295,7 @@ if (currentClockMinutes > 1110) {
 
 /* APPLY CLOSED MODE */
 
+/*
 if (isClosed) {
 
     document.body.style.opacity = "0.5";
@@ -313,3 +314,4 @@ if (isClosed) {
     });
 
 }
+*/
