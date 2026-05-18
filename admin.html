@@ -12,24 +12,27 @@
 </head>
 
 <body>
-  <script>
+  <div id="login-box">
 
-let password = prompt("Enter Admin Password");
+<h2>Admin Login</h2>
 
-if (password !== "HuangWangDuanYangLiXiaJi") {
+<input
+type="password"
+id="adminPassword"
+placeholder="Enter Password"
+>
 
-    alert("Wrong Password");
+<button onclick="checkPassword()">
+Login
+</button>
 
-    window.location.href = "index.html";
-
-}
-
-</script>
-
-<h1>Breakfast Shop Admin Page</h1>
+</div>
+<h1 id="admin-title" style="display:none;">
+Breakfast Shop Admin Page
+</h1>
 <button onclick="resetCounter()">Reset Orders</button>
 
-<div id="admin-orders"></div>
+<div id="admin-orders" style="display:none;"></div>
 
 <script type="module">
 
@@ -67,6 +70,38 @@ window.setDoc = setDoc;
 
 </script>
 
+<script>
+
+function checkPassword() {
+
+let password =
+document.getElementById(
+"adminPassword"
+).value;
+
+if (password === "2134hwdylxj") {
+
+document.getElementById(
+"login-box"
+).style.display = "none";
+
+document.getElementById(
+"admin-title"
+).style.display = "block";
+
+document.getElementById(
+"admin-orders"
+).style.display = "block";
+
+} else {
+
+alert("Wrong Password");
+
+}
+
+}
+
+</script>
 <script type="module" src="admin.js"></script>
 
 </body>
